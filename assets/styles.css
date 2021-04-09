@@ -1,0 +1,91 @@
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+.color-white {
+    color: #fff !important;
+}
+.color-red {
+    color: #f00 !important;
+}
+.container {
+    height: 100vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro {
+    font-size: 16vh;
+    font-family: 'Roboto', sans-serif;
+    transition: all .4s;
+    line-height: 20vh;
+    width: fit-content;
+}
+.img {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.intro:hover {
+    transform: translateX(8vh);
+}
+/* .intro:hover::before{
+    content: "surprise";
+} */
+.about::after {
+    content: "Hello.";
+}
+.work::after {
+    content: "I am";
+}
+.contact::after {
+    content: "Shubham";
+}
+.about:hover::before {
+    content: "About.  ";
+}
+.work:hover::before {
+    content: "Work.  ";
+}
+.contact:hover::before {
+    content: "Contact.  ";
+}
+.about:hover::after {
+    display: none;
+}
+.work:hover::after {
+    display: none;
+}
+.contact:hover::after {
+    display: none;
+}
+
+
+@media screen and (max-width:770px) {
+    .container {
+        width: 80%;
+    }
+    .intro {
+        font-size: 14vh;
+        line-height: 16vh;
+    }
+    .img {
+        left: 10%;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .container {
+        width: 70%;
+    }
+    .intro {
+        font-size: 12vh;
+        line-height: 14vh;
+    }
+    .img {
+        left: 20%;
+    }
+}
